@@ -1,0 +1,57 @@
+.item-head {
+  grid-area: header;
+  background-color: #515252;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(254, 254, 254);
+
+}
+.item-menu {
+  grid-area: menu;
+  background-color: #8a0a0a;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: rgb(254, 254, 254);
+
+}
+.item-screen {
+  grid-area: main;
+  background-color: #cc4e05;
+  text-align: center;
+}
+.item-vlist {
+  grid-area: right;
+  background-color: #560d9f;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  text-align: left;
+}
+.item-vlist ol li a {
+  text-decoration: none;
+  color: #e4f807;
+  font-size: 20px;
+  
+
+}
+.item-footer {
+  grid-area: footer;
+  background-color: #787575;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+  gap: .20px;
+  padding: 1%;
+
+}
+.course-header{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 40px;
+color: rgb(10, 124, 156);
+}
