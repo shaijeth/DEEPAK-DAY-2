@@ -1,29 +1,42 @@
-const queryString = window.location.search;
-console.log(queryString);
-const urlParams = new URLSearchParams(queryString);
-
-const id = urlParams.get('id')
-console.log(id);
-if(id==1)
-{
-  Document.getElementById("itemlist1").style.display="block";
-  Document.getElementById("itemlist2").style.display="none";
-}
-else if(id==2)
-{
-  Document.getElementById("itemlist2").style.display="block";
-  Document.getElementById("itemlist1").style.display="none";
-}
-document.getElementsByClassName("courseitem").addEventListener("click", function(e) {
-    tgt = e.target;
-    srctext= e.target.href;
-    if (tgt.classList.contains("mylinks")) {
-      e.preventDefault(); // cancel link
-      document.getElementById("videotitle").innerText = tgt.innerHTML;
-      //myframe
-      
-      document.getElementById("myframe").src = srctext;
-    }
-  })
-
+$(document).ready(function () {
+  var id = GetParameterValues("ID");
   
+  if (id == 1) {
+    $("#itemlist1").show();
+    $("#itemlist2").hide();
+    $("#coursename").text("Introduction");
+  } else if (id == 2) {
+    $("#itemlist2").show();
+    $("#itemlist1").hide();
+    $("#coursename").text("Canva Basics");
+
+  } else {
+    $("#itemlist1").hide();
+    $("#itemlist2").hide();
+    $("#coursename").text("");
+
+  }
+
+  function GetParameterValues(param) {
+    var url = window.location.href
+      .slice(window.location.href.indexOf("?") + 1)
+      .split("&");
+    for (var i = 0; i < url.length; i++) {
+      var urlparam = url[i].split("=");
+      if (urlparam[0] == param) {
+        return urlparam[1];
+      }
+    }
+  }
+
+
+  $(".courseitem a").click(function () {
+    var courseurl = $(this).attr("href");    
+    $('#myframe').attr('src',courseurl);
+    $('#videotitle').text( $(this).text());    
+    return false;
+  });
+
+
+
+});

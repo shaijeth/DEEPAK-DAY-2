@@ -8,7 +8,7 @@
 }
 .item-menu {
   grid-area: menu;
-  background-color: #8a0a0a;
+  background-color: #242424;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
@@ -17,26 +17,31 @@
 }
 .item-screen {
   grid-area: main;
-  background-color: #cc4e05;
+  background-color: #242424;
   text-align: center;
 }
 .item-vlist {
   grid-area: right;
-  background-color: #560d9f;
+  background-color: #242424;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   text-align: left;
+  
 }
 .item-vlist ol li a {
   text-decoration: none;
-  color: #e4f807;
+  color: #f3efef;
   font-size: 20px;
-  
-
+ 
+}
+.courseitem, .back-link,#coursename{
+  display: block;
+  color: #f3efef;
+  font-size: 20px;
 }
 .item-footer {
   grid-area: footer;
-  background-color: #787575;
+  background-color: #dd2233;
   text-align: center;
 }
 
@@ -52,6 +57,11 @@
 }
 .course-header{
 font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 40px;
-color: rgb(10, 124, 156);
+font-size: 20px;
+color: rgb(254, 254, 254);
+}
+#videotitle{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  color:aqua;
 }
