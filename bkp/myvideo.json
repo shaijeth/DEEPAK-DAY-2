@@ -1,0 +1,29 @@
+[
+    {
+      "course": "Basic 1",
+      "content": [
+        {
+          "title": "intro",
+          "url": "intro url"
+        },
+        {
+          "title": "intro",
+          "url": "intro url"
+        }
+
+      ]
+    },
+    {
+      "course": "Basic 2",
+      "content": [
+        {
+          "title": "intro",
+          "url": "intro url"
+        },
+        {
+          "title": "intro",
+          "url": "intro url"
+        }
+      ]
+    }
+  ]
